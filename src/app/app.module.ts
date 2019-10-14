@@ -9,10 +9,14 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SidebarModule } from 'primeng/sidebar';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {MenuModule} from 'primeng/menu';
+import { MenuModule } from 'primeng/menu';
 import { MenuItem } from 'primeng/api';
+import { CalendarModule } from 'primeng/calendar';
+import { FormsModule } from '@angular/forms';
+import {SlideMenuModule} from 'primeng/slidemenu';
+import {ChartModule} from 'primeng/chart';
 
-
+import { FullCalendarModule } from 'primeng/fullcalendar';
 
 
 @NgModule({
@@ -29,8 +33,12 @@ import { MenuItem } from 'primeng/api';
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
     FontAwesomeModule,
-    MenuModule
-    ],
+    MenuModule,
+    CalendarModule,
+    FormsModule,
+    SlideMenuModule,
+    ChartModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

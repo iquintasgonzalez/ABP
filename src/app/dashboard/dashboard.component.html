@@ -1,4 +1,22 @@
-<p-menu [model]="items">
+<p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+    <h1 style="font-weight:normal">Left Sidebar</h1>
+    <button pButton type="button" (click)="visibleSidebar1 = false" label="Save" class="ui-button-success"></button>
+    <button pButton type="button" (click)="visibleSidebar1 = false" label="Cancel" class="ui-button-secondary"></button>
+</p-sidebar>
+<button pButton type="button" (click)="visibleSidebar1 = true" icon="pi pi-arrow-right"></button>
+<div class="ui-g">
 
 
-</p-menu>
+
+
+    <button #btn type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button>
+    <p-slideMenu #menu [model]="items" [popup]="true" [viewportHeight]="250"></p-slideMenu>
+</div>
+
+<div id="calendario" class="ui-g">
+    <div class="ui-g-12 ui-md-4">
+        <p-calendar [(ngModel)]="date1"></p-calendar>
+    </div>
+
+    <p-chart type="pie" [data]="data"></p-chart>
+</div>

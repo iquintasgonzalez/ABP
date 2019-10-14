@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 * {
     box-sizing: border-box;
 }
@@ -9,9 +8,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
     height: 100vh;
     margin: -20px 0 50px;
+    margin: auto;
 }
 
 h1 {
@@ -172,8 +171,7 @@ input {
     width: 200%;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
-    /* background-image: url('../../images/bananas.jpg');
-    opacity: 0.6; */
+    background-image: url('../../images/bananas.jpg');
     /*background-image: url("paper.gif");*/
 }
 
@@ -242,10 +240,6 @@ footer {
 
 footer p {
     margin: 10px 0;
-}
-
-footer i {
-    background-image: url('/Users/nacho/Documents/Universidad/4º/ABP/my-app/src/depositphotos_120672790-stock-illustration-cartoon-bananas-on-a-green.jpg');
 }
 
 footer a {
