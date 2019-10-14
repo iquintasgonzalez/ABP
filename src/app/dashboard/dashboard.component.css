@@ -1,3 +1,49 @@
-#calendario {
-    margin-left: 20%;
+.topnav {
+    background-color: rgb(238, 235, 235);
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.ui-button {
+    background-color: rgb(180, 180, 180);
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: rgb(223, 221, 221);
+    color: rgb(0, 0, 0);
+}
+
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+    background-color: rgb(210, 215, 220);
+    color: white;
+}
+
+.bg-img {
+    /* The image used */
+    /*background-image: url("img_nature.jpg");*/
+    min-height: 380px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Needed to position the navbar */
+    position: relative;
+    background-image: url("../../images/Cabecera.png");
 }

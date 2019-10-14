@@ -15,8 +15,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import {SlideMenuModule} from 'primeng/slidemenu';
 import {ChartModule} from 'primeng/chart';
-
-import { FullCalendarModule } from 'primeng/fullcalendar';
+import {MenubarModule} from 'primeng/menubar';
 
 
 @NgModule({
@@ -37,7 +36,8 @@ import { FullCalendarModule } from 'primeng/fullcalendar';
     CalendarModule,
     FormsModule,
     SlideMenuModule,
-    ChartModule
+    ChartModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
