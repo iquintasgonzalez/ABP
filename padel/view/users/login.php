@@ -6,17 +6,52 @@ $view = ViewManager::getInstance();
 $view->setVariable("title", "Login");
 $errors = $view->getVariable("errors");
 ?>
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+	<form action="index.php?controller=users&amp;action=login" method="POST">
+            <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+        </form>
+		</div>
+    <div class="form-container sign-in-container">
+        <form action="index.php?controller=users&amp;action=register" method="POST">
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+        </form>
+    </div>
+    <div class="overlay-container">
 
-<h1><?= i18n("Login") ?></h1>
-<?= isset($errors["general"])?$errors["general"]:"" ?>
+        <div class="overlay">
 
-<form action="index.php?controller=users&amp;action=login" method="POST">
-	<?= i18n("Username")?>: <input type="text" name="username">
-	<?= i18n("Password")?>: <input type="password" name="passwd">
-	<input type="submit" value="<?= i18n("Login") ?>">
-</form>
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
 
-<p><?= i18n("Not user?")?> <a href="index.php?controller=users&amp;action=register"><?= i18n("Register here!")?></a></p>
-<?php $view->moveToFragment("css");?>
-<link rel="stylesheet" type="text/css" src="css/style2.css">
-<?php $view->moveToDefaultFragment(); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -10,6 +10,8 @@ $currentuser = $view->getVariable("currentusername");
 	<title><?= $view->getVariable("title", "no title") ?></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+
 	<!-- enable ji18n() javascript function to translate inside your scripts -->
 	<script src="index.php?controller=language&amp;action=i18njs">
 	</script>
