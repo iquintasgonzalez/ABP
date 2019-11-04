@@ -1,34 +1,66 @@
 <?php
 //file: view/users/register.php
 
-require_once(__DIR__."/../../core/ViewManager.php");
+require_once(__DIR__ . "/../../core/ViewManager.php");
 $view = ViewManager::getInstance();
+$view->setVariable("title", "Register");
+
 $errors = $view->getVariable("errors");
 $user = $view->getVariable("user");
-$view->setVariable("title", "Register");
 ?>
-<h1><?= i18n("Register")?></h1>
-<form action="index.php?controller=users&amp;action=register" method="POST" enctype="multipart/form-data">
-	<?= i18n("Username")?>: <input type="text" name="username"
-	value="<?= $user->getUsername() ?>">
-	<?= isset($errors["username"])?i18n($errors["username"]):"" ?><br>
 
-	<?= i18n("Password")?>: <input type="password" name="passwd" value="">
-	<?= isset($errors["passwd"])?i18n($errors["passwd"]):"" ?><br>
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<form class="login100-form validate-form" method="POST" action="./index.php?controller=users&action=register">
+				<span class="login100-form-title p-b-43">
+					Register
+				</span>
 
-	<?= i18n("Name")?>: <input type="text" name="nombre" value="<?= $user->getNombre() ?>">
-	<?= isset($errors["nombre"])?i18n($errors["nombre"]):"" ?><br>
+				<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+					<input type="text" name="username" value="<?= $user->getUsername() ?>">
+					<span class=" focus-input100"></span>
+					<span class="label-input100">Username </span>
+				</div>
 
-	<?= i18n("Email")?>: <input type="email" name="email" value="<?= $user->getEmail() ?>">
-	<?= isset($errors["email"])?i18n($errors["email"]):"" ?><br>
+				<div class="wrap-input100 validate-input" data-validate="Password is required">
+					<input type="password" name="passwd" value="">
+					<span class="focus-input100"></span>
+					<span class="label-input100">Password</span>
+				</div>
 
-	<?= i18n("Avatar")?>: <input type="file" name="avatar" value="<?= $user->getAvatar() ?>">
-	<?= isset($errors["avatar"])?i18n($errors["avatar"]):"" ?><br>
+				<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+					<input type="text" name="nombre" value="<?= $user->getNombre() ?>">
+					<span class="focus-input100"></span>
+					<span class="label-input100">Nombre </span>
+				</div>
 
-	<?= i18n("Gender")?>:
-	<input type="radio" name="sexo" value="hombre"><?= i18n("Male")?><br>
-	<input type="radio" name="sexo" value="mujer"><?= i18n("Female")?><br>
-	<?= isset($errors["sexo"])?i18n($errors["sexo"]):"" ?><br>
+				<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+					<input type="email" name="email" value="<?= $user->getEmail() ?>">
+					<span class="focus-input100"></span>
+					<span class="label-input100">Email</span>
+				</div>
 
-	<input type="submit" value="<?= i18n("Register")?>">
-</form>
+				
+
+				<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+					<input type="radio" name="sexo" value="hombre">Hombre<br>
+					<input type="radio" name="sexo" value="mujer">Mujer<br>
+					<span class="focus-input100"></span>
+					<span class="label-input100">Sexo</span>
+				</div>
+
+				<div class="container-login100-form-btn">
+				<button class="login100-form-btn">
+							Register
+						</button>
+				</div>
+				
+
+			</form>
+
+			<div class="login100-more" style="background-image: url('/images/banadas.jpeg');">
+			</div>
+		</div>
+	</div>
+</div>

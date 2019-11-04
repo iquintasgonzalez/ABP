@@ -6,52 +6,78 @@ $view = ViewManager::getInstance();
 $view->setVariable("title", "Login");
 $errors = $view->getVariable("errors");
 ?>
-<div class="container" id="container">
-    <div class="form-container sign-up-container">
-	<form action="index.php?controller=users&amp;action=login" method="POST">
-            <h1>Create Account</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
-            </div>
-            <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button>Sign Up</button>
-        </form>
-		</div>
-    <div class="form-container sign-in-container">
-        <form action="index.php?controller=users&amp;action=login" method="POST">
-            <h1>Sign in</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
-            </div>
-            <span>or use your account</span>
-            <input type="text" placeholder="Login" />
-            <input type="password" placeholder="Password" />
-            <a href="#">Forgot your password?</a>
-            <button>Sign In</button>
-        </form>
-    </div>
-    <div class="overlay-container">
 
-        <div class="overlay">
 
-            <div class="overlay-panel overlay-left">
-                <h1>Welcome Back!</h1>
-                <p>To keep connected with us please login with your personal info</p>
-                <button class="ghost" id="signIn">Sign In</button>
-            </div>
-            <div class="overlay-panel overlay-right">
-                <h1>Hello, Friend!</h1>
-                <p>Enter your personal details and start journey with us</p>
-                <button class="ghost" id="signUp">Sign Up</button>
+<div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" action="./index.php?contoller=user&action=login">
+                    <span class="login100-form-title p-b-43">
+						Login to continue
+					</span>
 
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <!--<span class="label-input100">Email</span>-->
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <!--<span class="label-input100">Password</span>-->
+                    </div>
+
+                    <div class="flex-sb-m w-full p-t-3 p-b-32">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+                        </div>
+
+                        <div>
+                            <a href="#" class="txt1">
+								Forgot Password?
+							</a>
+                        </div>
+                    </div>
+
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+							Login
+						</button>
+                    </div>
+
+                    <div class="text-center p-t-46 p-b-20">
+                        <span class="txt2">
+                        <a href="./index.php?contoller=user&action=register" >
+                        or sign up using
+                        </a>
+							
+						</span>
+                    </div>
+
+                    <div class="login100-form-social flex-c-m">
+                        <a href="/dashboard" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                            <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
+
+                <div class="login100-more" style="background-image: url('/images/banadas.jpeg');">
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+
 
 
