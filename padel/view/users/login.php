@@ -22,14 +22,14 @@ $errors = $view->getVariable("errors");
         </form>
 		</div>
     <div class="form-container sign-in-container">
-        <form action="index.php?controller=users&amp;action=register" method="POST">
+        <form action="index.php?controller=users&amp;action=login" method="POST">
             <h1>Sign in</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fa fa-facebook"></i></a>
                 <a href="#" class="social"><i class="fa fa-google-plus"></i></a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Login" />
             <input type="password" placeholder="Password" />
             <a href="#">Forgot your password?</a>
             <button>Sign In</button>

@@ -3,14 +3,13 @@
 
 require_once(__DIR__."/../core/ValidationException.php");
 
-/**
-* Class User
-*
-* Represents a User in the blog
-*
-* @author lipido <lipido@gmail.com>
-*/
 class User {
+
+	/**
+	* The user name of the user
+	* @var string
+	*/
+	private $id_usuario;
 
 	/**
 	* The user name of the user
@@ -66,8 +65,9 @@ class User {
 	* @param string $username The name of the user
 	* @param string $passwd The password of the user
 	*/
-	public function __construct($username=NULL, $passwd=NULL, $nombre=NULL, $email=NULL,
+	public function __construct($id_usuario=NULL, $username=NULL, $passwd=NULL, $nombre=NULL, $email=NULL,
 	$avatar=NULL, $rol=NULL, $sexo=NULL, $nivel=NULL ) {
+		$this->id_usuario = $id_usuario;
 		$this->username = $username;
 		$this->passwd = $passwd;
 		$this->nombre = $nombre;
@@ -76,6 +76,25 @@ class User {
 		$this->rol = $rol;
 		$this->sexo = $sexo;
 		$this->nivel = $nivel;
+	}
+	
+	/**
+	* Gets the username of this user
+	*
+	* @return string The username of this user
+	*/
+	public function getIdUsuario() {
+		return $this->id_usuario;
+	}
+
+	/**
+	* Sets the username of this user
+	*
+	* @param string $username The username of this user
+	* @return void
+	*/
+	public function setIdUsuario($id_usuario) {
+		$this->id_usuario = $id_usuario;
 	}
 
 	/**
