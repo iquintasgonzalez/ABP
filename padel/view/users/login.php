@@ -16,16 +16,15 @@ $errors = $view->getVariable("errors");
 						Login to continue
 					</span>
 
-
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="email" placeholder="Email">
+                    <div class="wrap-input100 validate-input" >
+                        <input class="input100" type="text" name="username" placeholder="Nombre">
                         <span class="focus-input100"></span>
                         <!--<span class="label-input100">Email</span>-->
                     </div>
 
 
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Password">
+                    <div class="wrap-input100 validate-input" >
+                        <input class="input100" type="password" name="passwd" placeholder="Password">
                         <span class="focus-input100"></span>
                         <!--<span class="label-input100">Password</span>-->
                     </div>
